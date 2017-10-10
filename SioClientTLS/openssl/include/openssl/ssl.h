@@ -2128,7 +2128,7 @@ void BIO_ssl_shutdown(BIO *ssl_bio);
 # endif
 
 int SSL_CTX_set_cipher_list(SSL_CTX *, const char *str);
-SSL_CTX *SSL_CTX_newSIO(const SSL_METHOD *meth);
+SSL_CTX *SSL_CTX_new(const SSL_METHOD *meth);
 void SSL_CTX_free(SSL_CTX *);
 long SSL_CTX_set_timeout(SSL_CTX *ctx, long t);
 long SSL_CTX_get_timeout(const SSL_CTX *ctx);
@@ -2364,7 +2364,7 @@ const SSL_METHOD *SSLv23_server_method(void); /* Negotiate highest available
 const SSL_METHOD *SSLv23_client_method(void); /* Negotiate highest available
                                                * SSL/TLS version */
 
-const SSL_METHOD *TLSv1_meth(void); /* TLSv1.0 */
+const SSL_METHOD *TLSv1_method(void); /* TLSv1.0 */
 const SSL_METHOD *TLSv1_server_method(void); /* TLSv1.0 */
 const SSL_METHOD *TLSv1_client_method(void); /* TLSv1.0 */
 
@@ -2376,7 +2376,7 @@ const SSL_METHOD *TLSv1_2_method(void); /* TLSv1.2 */
 const SSL_METHOD *TLSv1_2_server_method(void); /* TLSv1.2 */
 const SSL_METHOD *TLSv1_2_client_method(void); /* TLSv1.2 */
 
-const SSL_METHOD *DTLSv1_meth(void); /* DTLSv1.0 */
+const SSL_METHOD *DTLSv1_method(void); /* DTLSv1.0 */
 const SSL_METHOD *DTLSv1_server_method(void); /* DTLSv1.0 */
 const SSL_METHOD *DTLSv1_client_method(void); /* DTLSv1.0 */
 
@@ -2737,7 +2737,7 @@ void ERR_load_SSL_strings(void);
 # define SSL_F_SSL_CTRL                                   232
 # define SSL_F_SSL_CTX_CHECK_PRIVATE_KEY                  168
 # define SSL_F_SSL_CTX_MAKE_PROFILES                      309
-# define SSL_F_SSL_CTX_newSIO                             169
+# define SSL_F_SSL_CTX_NEW                                169
 # define SSL_F_SSL_CTX_SET_CIPHER_LIST                    269
 # define SSL_F_SSL_CTX_SET_CLIENT_CERT_ENGINE             290
 # define SSL_F_SSL_CTX_SET_PURPOSE                        226
