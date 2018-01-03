@@ -403,7 +403,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					"SIO_TLS=1",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/lib/rapidjson/include",
@@ -443,7 +442,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = "SIO_TLS=1";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/lib/rapidjson/include",
 					"$(SRCROOT)/lib/websocketpp",
